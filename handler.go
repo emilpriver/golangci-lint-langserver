@@ -78,7 +78,7 @@ func (h *langHandler) lint(uri DocumentURI) ([]Diagnostic, error) {
 		return diagnostics, nil
 	} else if len(b) == 0 {
 		// golangci-lint would output critical error to stderr rather than stdout
-		// https://github.com/nametake/golangci-lint-langserver/issues/24
+		// https://github.com/emilpriver/golangci-lint-langserver/issues/24
 		return h.errToDiagnostics(err), nil
 	}
 
